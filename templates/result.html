@@ -1,0 +1,46 @@
+{% extends "master.html" %}
+
+{% block title %}
+    Result
+{% endblock %}
+  
+{% block content %}
+
+    <p>Back to <a href="/main">Search</a></p>
+
+    <table border="1" cellpadding="10">
+      <tr>
+        <th>Imgae Url</th>
+      </tr>
+      {% for x in first %}
+      <tr>
+        <td><a href="{{x}}">{{ x }}</a></td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <br><br>
+
+    <table border="2" cellpadding="10">
+      <tr>
+        <th>Text</th>
+      </tr>
+      {% for x in second %}
+      <tr>
+        <td>{{ x }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <p>Back to <a href="/main">Search</a></p>
+             
+  {% endblock %}
+
+
+
+
+  
+
+
+
+

@@ -1,0 +1,33 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Main
+{% endblock %}
+
+
+{% block content %}
+  <style>
+    .center {
+      border: 1px;
+      display: flex;
+      justify-content: center;
+      background-color: aqua;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      margin: 60px;
+      border-radius: 15px;
+      text-align: justify;
+      ;
+    }
+  </style>
+  
+  <form action="{% url 'saveenquiry' %}" method="post" class="center">
+    {% csrf_token %}
+    <label for="">Paste the website link here: </label>
+    <input id='s_url' type="text" name="site_url" placeholder="URL">
+    <input type="submit" value="Scrap">
+  </form>
+
+{% endblock %}
+
+<!-- {% url 'saveenquiry' %} -->
